@@ -6,58 +6,58 @@ import org.junit.Test;
 public class FindMaximumNumberTest {
     @Test
     public void givenThreeInteger_MaxValueAT_FirstPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        int maxNumber = findMaximumNumber.maximumValue(30,10,20);
-        Assert.assertEquals(30,maxNumber);
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber(30,10,20);
+        int maxNumber = (int)findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.firstValue,maxNumber);
     }
     @Test
     public void givenThreeInteger_MaxValueAT_SecondPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        int maxNumber = findMaximumNumber.maximumValue(10,30,20);
-        Assert.assertEquals(30,maxNumber);
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber(10,30,20);
+        int maxNumber = (int)findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.secondValue,maxNumber);
     }
     @Test
     public void givenThreeInteger_MaxValueAT_ThirdPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        int maxNumber = findMaximumNumber.maximumValue(10,20,30);
-        Assert.assertEquals(30,maxNumber);
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber(10,20,30);
+        int maxNumber = (int)findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.thirdValue,maxNumber);
     }
 
     @Test
     public void givenThreeFloat_MaxValueAT_FirstPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        Float maxNumber = findMaximumNumber.maximumValue(30.30f,10.10f,20.20f);
-        Assert.assertEquals(java.util.Optional.of((Float)30.30f),java.util.Optional.of(maxNumber));
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber(30.30f,10.10f,20.20f);
+        Float maxNumber = (Float) findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.firstValue,maxNumber);
     }
     @Test
     public void givenThreeFloat_MaxValueAT_SecondPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        Float maxNumber = findMaximumNumber.maximumValue(10.10f,30.30f,20.20f);
-        Assert.assertEquals(java.util.Optional.of((Float)30.30f),java.util.Optional.of(maxNumber));
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber(10.10f,30.30f,20.20f);
+        Float maxNumber = (Float) findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.secondValue,maxNumber);
     }
     @Test
     public void givenThreeFloat_MaxValueAT_ThirdPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        Float maxNumber = findMaximumNumber.maximumValue(10.10f,20.20f,30.30f);
-        Assert.assertEquals(java.util.Optional.of((Float)30.30f),java.util.Optional.of(maxNumber));
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber(10.10f,20.20f,30.30f);
+        Float maxNumber = (Float) findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.thirdValue,maxNumber);
     }
 
     @Test
     public void givenThreeString_MaxValueAT_FirstPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        String maxValue = findMaximumNumber.maximumValue("Banana","Peach","Apple");
-        Assert.assertEquals("Banana",maxValue);
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber("Peach","Apple","Banana");
+        String maxValue = (String) findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.firstValue,maxValue);
     }
     @Test
     public void givenThreeString_MaxValueAT_SecondPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        String maxValue = findMaximumNumber.maximumValue("Peach","Banana","Apple");
-        Assert.assertEquals("Banana",maxValue);
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber("Apple","Peach","Banana");
+        String maxValue = (String) findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.secondValue,maxValue);
     }
     @Test
     public void givenThreeString_MaxValueAT_ThirdPosition_ShouldReturnSame() {
-        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
-        String maxValue = findMaximumNumber.maximumValue("Peach","Apple","Banana");
-        Assert.assertEquals("Banana",maxValue);
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber("Apple","Banana","Peach");
+        String maxValue = (String) findMaximumNumber.maximumValue();
+        Assert.assertEquals(findMaximumNumber.thirdValue,maxValue);
     }
 }
