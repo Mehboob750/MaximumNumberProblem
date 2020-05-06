@@ -19,4 +19,13 @@ public class FindMaximumNumber {
         else
             return number3;
     }
+
+    public String maximumValue(String value1, String value2, String value3) {
+    if (value1.length()>value2.length() && value1.length()> value2.length())
+        return value1;
+    else if (value2.length()>value1.length() && value2.length()> value3.length())
+        return value2;
+    else
+        return value3;
+    }
 }

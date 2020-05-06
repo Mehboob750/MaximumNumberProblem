@@ -41,4 +41,23 @@ public class FindMaximumNumberTest {
         Float maxNumber = findMaximumNumber.maximumValue(10.10f,20.20f,30.30f);
         Assert.assertEquals(java.util.Optional.of((Float)30.30f),java.util.Optional.of(maxNumber));
     }
+
+    @Test
+    public void givenThreeString_MaxValueAT_FirstPosition_ShouldReturnSame() {
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
+        String maxValue = findMaximumNumber.maximumValue("Banana","Peach","Apple");
+        Assert.assertEquals("Banana",maxValue);
+    }
+    @Test
+    public void givenThreeString_MaxValueAT_SecondPosition_ShouldReturnSame() {
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
+        String maxValue = findMaximumNumber.maximumValue("Peach","Banana","Apple");
+        Assert.assertEquals("Banana",maxValue);
+    }
+    @Test
+    public void givenThreeString_MaxValueAT_ThirdPosition_ShouldReturnSame() {
+        FindMaximumNumber findMaximumNumber = new FindMaximumNumber();
+        String maxValue = findMaximumNumber.maximumValue("Peach","Apple","Banana");
+        Assert.assertEquals("Banana",maxValue);
+    }
 }
